@@ -53,6 +53,24 @@ const removeOrderItem = (itemId) => {
     }
 }
 
+const displayPaymentModal = () => {
+    paymentModal.style.display = "block"
+    allContent.style.backgroundColor = "#8B8B8B"
+}
+
+const processPayment = () => {
+    paymentModal.style.display ="none"
+    allContent.style.backgroundColor = "#FFF"
+
+    const userName = nameInput.value 
+
+    orderContainer.innerHTML = `
+                                <div class="complete-order-text">
+                                    <p>Thanks, ${userName}! Your order is on its way!</p>
+                                </div>
+                                `
+}
+
 const getMenuHtml = () => {
     let menuHtml = ""
     
@@ -115,22 +133,4 @@ const getOrderItemHtml = () => {
 
 const renderOrderItems = () => {
     document.getElementById("order-items").innerHTML = getOrderItemHtml()
-}
-
-const displayPaymentModal = () => {
-    paymentModal.style.display = "block"
-    allContent.style.backgroundColor = "#8B8B8B"
-}
-
-const processPayment = () => {
-    paymentModal.style.display ="none"
-    allContent.style.backgroundColor = "#FFF"
-
-    const userName = nameInput.value 
-
-    orderContainer.innerHTML = `
-                                <div class="complete-order-text">
-                                    <p>Thanks, ${userName}! Your order is on its way!</p>
-                                </div>
-                                `
 }
