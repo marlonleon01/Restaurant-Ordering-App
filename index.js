@@ -5,6 +5,7 @@ const menuItemsContainer = document.getElementById("menu-items-container")
 const orderContainer = document.getElementById("order-container")
 const paymentModal = document.getElementById("modal-container")
 const nameInput = document.getElementById("name-input")
+const modalInput = document.getElementsByTagName("input")
 
 let totalPrice = 0
 let order = []
@@ -19,7 +20,7 @@ document.addEventListener("click", event => {
     if (event.target.id === "complete-order") {
         displayPaymentModal()
     }
-    if (event.target.id === "pay-btn") {
+    if (event.target.id === "pay-btn" && modalInput.value.length > 1) {
         event.preventDefault
         processPayment()
     }
