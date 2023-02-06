@@ -19,3 +19,23 @@ const renderAllContent = () => {
 }
 
 renderAllContent()
+
+const renderOrder = () => {
+    allContent.innerHTML += `
+                            <div class="your-order">
+                            <h1 class="order-title">Your Order</h1>
+                            <div class="order-items">
+                                <h3 class="order-item">Pizza</h3>
+                                <h4 class="order-item-price">$14</h4>
+                                <h3 class="order-item">Beer</h3>
+                                <h4 class="order-item-price">$12</h4>
+                            </div>
+                            <div class="order-final-price">
+                                <h3 class="price-title">Total Price:</h3>
+                                <h4 class="price-number">$26</h4>
+                            </div>
+                            </div>
+                            `
+}
+
+renderOrder()
