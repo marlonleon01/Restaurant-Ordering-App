@@ -4,6 +4,7 @@ const allContent = document.getElementById("all-content")
 const menuItemsContainer = document.getElementById("menu-items-container")
 const orderContainer = document.getElementById("order-container")
 const paymentModal = document.getElementById("modal-container")
+const nameInput = document.getElementById("name-input")
 
 let totalPrice = 0
 let order = []
@@ -18,6 +19,11 @@ document.addEventListener("click", event => {
     if (event.target.id === "complete-order") {
         displayPaymentModal()
     }
+    if (event.target.id === "pay-btn") {
+        event.preventDefault
+        processPayment()
+    }
+
 })
 
 const addOrderItem = (itemId) => {
@@ -113,4 +119,17 @@ const renderOrderItems = () => {
 const displayPaymentModal = () => {
     paymentModal.style.display = "block"
     allContent.style.backgroundColor = "#8B8B8B"
+}
+
+const processPayment = () => {
+    paymentModal.style.display ="none"
+    allContent.style.backgroundColor = "#FFF"
+
+    const userName = nameInput.value 
+
+    orderContainer.innerHTML = `
+                                <div class="complete-order-text">
+                                    <p>Thanks, ${userName}! Your order is on its way!</p>
+                                </div>
+                                `
 }
