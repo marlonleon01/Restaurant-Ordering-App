@@ -113,7 +113,6 @@ i {
 
 .your-order {
     margin: 46px;
-    display: none;
 }
 
 .order-title {
@@ -122,17 +121,21 @@ i {
 }
 
 .order-items {
-    margin-top: 40px;
+    margin: 0;
+    border-bottom: 2px solid #393333;
+}
+
+.order-individual-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #393333;
 }
 
 .order-item {
     display: flex;
     align-items: center;
     font-size: 28px;
+    margin: 5px;
 }
 
 .remove-item {
@@ -143,6 +146,7 @@ i {
 
 .order-item-price {
     font-size: 20px;
+    margin: 5px;
 }
 
 .order-final-price {
