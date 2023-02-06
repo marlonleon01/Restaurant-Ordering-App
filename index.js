@@ -3,7 +3,7 @@ import { menuArray } from "./data.js";
 const allContent = document.getElementById("all-content")
 const menuItemsContainer = document.getElementById("menu-items-container")
 const orderContainer = document.getElementById("order-container")
-
+const paymentModal = document.getElementById("modal-container")
 
 let totalPrice = 0
 let order = []
@@ -14,6 +14,9 @@ document.addEventListener("click", event => {
     }
     if (event.target.dataset.remove) {
         removeOrderItem(event.target.dataset.remove)
+    }
+    if (event.target.id === "complete-order") {
+        displayPaymentModal()
     }
 })
 
@@ -79,7 +82,7 @@ const getOrderSectionHtml = () => {
                 <h3 class="price-title">Total Price:</h3>
                 <h4 class="price-number">$${totalPrice}</h4>
             </div>
-            <button class="complete-order">Complete order</button>
+            <button class="complete-order" id="complete-order">Complete order</button>
             </div>
             `
 }
@@ -105,4 +108,9 @@ const getOrderItemHtml = () => {
 
 const renderOrderItems = () => {
     document.getElementById("order-items").innerHTML = getOrderItemHtml()
+}
+
+const displayPaymentModal = () => {
+    paymentModal.style.display = "block"
+    allContent.style.backgroundColor = "#8B8B8B"
 }
