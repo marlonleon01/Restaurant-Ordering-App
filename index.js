@@ -79,7 +79,7 @@ const getOrderSectionHtml = () => {
                 <h3 class="price-title">Total Price:</h3>
                 <h4 class="price-number">$${totalPrice}</h4>
             </div>
-            <button name="complete order button">Complete order</button>
+            <button class="complete-order">Complete order</button>
             </div>
             `
 }
