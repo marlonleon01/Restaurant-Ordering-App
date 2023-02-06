@@ -27,6 +27,10 @@ body {
     background-color: #FFF;
 }
 
+h1, h2, h3, h4, p {
+    font-weight: 400;
+}
+
 /* Header */
 
 .header {
@@ -40,7 +44,6 @@ body {
 
 .header-title {
     position: absolute;
-    font-weight: 400;
     font-size: 39px;
     left: 46px;
     top: 46px;
@@ -50,11 +53,9 @@ body {
 
 .header-subheading {
     position: absolute;
-    font-weight: 400;
     left: 46px;
     top: 89px;
     font-size: 22px;
-    font-weight: 400;
     line-height: 14px;
     margin: 0;
 }
@@ -106,4 +107,66 @@ body {
 i {
     font-size: 1.4rem;
     color: #3C3C3C;
+}
+
+/* Order */
+
+.your-order {
+    margin: 46px;
+}
+
+.order-title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.order-items {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #393333;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+}
+
+.remove-item {
+    margin-left: 12px;
+    color: #BBBBBB;
+    font-size: 18px;
+}
+
+.order-item-price {
+    font-size: 20px;
+}
+
+.order-final-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-title {
+    font-size: 28px;
+    margin: 8px 0 60px 0;
+}
+
+.price-number {
+    font-size: 20px;
+    margin: 8px 0 60px 0;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    background-color: #16DB99;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #FFF;
+    font-weight: bold;
 }
