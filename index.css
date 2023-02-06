@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Smythe', cursive;
+    background-color: #DEDEDE;
 }
 
 .all-content {
@@ -23,6 +24,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #FFF;
 }
 
 /* Header */
@@ -43,6 +45,7 @@ body {
     left: 46px;
     top: 46px;
     line-height: 24px;
+    margin: 0;
 }
 
 .header-subheading {
@@ -50,10 +53,10 @@ body {
     font-weight: 400;
     left: 46px;
     top: 89px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 14px;
-    font-size: 22px;
-    height: 8px;
+    margin: 0;
 }
 
 /* Menu Items */
@@ -63,4 +66,44 @@ body {
     align-items: center;
     height: 140px;
     margin: 46px;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.item-contents {
+     margin-left: 36px;
+}
+
+.menu-item-title {
+    font-size: 28px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+.item-description {
+    color: #8B8B8B;
+    font-size: 16px;
+    margin: 5px 0 0 0;
+}
+
+.item-price {
+    font-size: 20px;
+    margin: 14px 0 0 0;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    margin-right: 46px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1.5px solid #DEDEDE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i {
+    font-size: 1.4rem;
+    color: #3C3C3C;
 }
