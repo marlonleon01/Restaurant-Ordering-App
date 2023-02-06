@@ -12,6 +12,9 @@ document.addEventListener("click", event => {
     if (event.target.dataset.add) {
         addOrderItem(event.target.dataset.add)
     }
+    if (event.target.dataset.remove) {
+        removeOrderItem(event.target.dataset.remove)
+    }
 })
 
 const addOrderItem = (itemId) => {
@@ -22,6 +25,19 @@ const addOrderItem = (itemId) => {
     if (!order.includes(targetItemObj)) {
         order.push(targetItemObj)
         totalPrice += targetItemObj.price
+        renderOrderSection()
+        renderOrderItems()
+    }
+}
+
+const removeOrderItem = (itemId) => {
+    const targetItemObj = menuArray.filter(item => {
+        return item.id == itemId
+    })[0]
+
+    if (order.includes(targetItemObj)) {
+        order.pop(targetItemObj)
+        totalPrice -= targetItemObj.price
         renderOrderSection()
         renderOrderItems()
     }
