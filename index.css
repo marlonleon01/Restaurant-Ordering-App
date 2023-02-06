@@ -224,3 +224,17 @@ input {
     font-weight: bold;
     font-size: 24px;
 }
+
+/* Processed Payment Alert */
+
+.complete-order-text {
+    background-color: #ECFDF5;
+    color: #065F46;
+    margin: 46px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 10px;;
+}
